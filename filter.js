@@ -1,6 +1,14 @@
 
 function filter(arr, func) {
+    let newarr = [] 
 
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i]) === true) {
+            newarr.push(arr[i])
+        }
+        
+    }
+ return newarr
 }
 
 // TEST 1
@@ -10,5 +18,13 @@ console.log(filteredNumbers)
 
 // TEST 2 - skriv själv
 
+const cars = ["mercedes", "volvo", "mishubishu", "nissa"]
+const filteredCars = filter(cars, x => x.length < 6  )
+console.log(filteredCars)
+
 
 // TEST 3 - skriv själv
+
+const fruits = ["Orange", "apple", "banana", "pineapple", "coconut"]
+const filteredfruits = filter(fruits, x => x.length < 7 )
+console.log(filteredfruits)

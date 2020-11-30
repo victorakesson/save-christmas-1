@@ -1,11 +1,19 @@
 
 function map(arr, func) {
+ const searray = arr.length 
+
+ for (i = 0; i < arr.length; i++) {
+  searray[i] = func(arr[i])
+
     // skapa en ny tom array av samma längd som arr
 
     // för varje element i arr
     //      newArray[j] = func(arr[j])
 
     // returnera den nya arrayen
+}
+
+return searray 
 }
 
 // Test 1
@@ -24,3 +32,7 @@ console.log(stringArray)    // ['boll', 'häst', 'flygplan']
 
 // Test 3 - GÖR ETT EGET TEST HÄR
 console.log('\nTEST 3')
+const number = [13, 3, 8, 9, 6]
+const newnumber = number.map(x => x / 3); 
+console.log(number)
+console.log(newnumber)

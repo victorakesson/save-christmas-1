@@ -1,19 +1,35 @@
-const all = [5, 7, 9, 12, 15, 18];
-function max() {
-    let arr = Math.max(...all);
-    console.log(arr)
+function max(arr) {
+  let max = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+      if(arr[i] > max){
+          max = arr[i];
+ }
+  }
+  return max;
 }
 
-max();
-function min() {
-    let arr = Math.min(...all);
-    console.log(arr)
+console.log(max([50,100,150,200,250]));
+
+function min(arr) {
+  let min = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+      if(arr[i] < min){
+          min = arr[i];
+  }
+  }
+  return min;
 }
 
-min();
-function mean() {
-    let arr = (all[0] + all[1] + all[2] + all[3] + all[4] + all[5]) / 6
-    console.log(Math.round(arr))
+
+console.log(min([1, 2, 3, 4]));
+
+function median(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+  }
+
+  return sum/arr.length;
 }
 
-
+console.log(median([ 10, 100, 57, 89, 4, 5, 9 ])) 
